@@ -1,0 +1,39 @@
+To run the OKGYM project, you have two options:
+
+OPTION 1: Using the Command Line (Recommended)
+----------------------------------------------
+Follow these steps to start the servers manually:
+
+1. Start the Backend Server:
+   - Open a terminal window and navigate to the backend folder:
+     cd "d:\AI Gym posture check\OKGYM\backend"
+   - Install dependencies (if you haven't already):
+     npm install
+   - Start the server using ts-node:
+     node ./node_modules/ts-node/dist/bin.js --transpile-only src/app.ts
+     (or run `npm run dev` if you've updated the package.json to remove hardcoded paths)
+
+2. Start the Frontend Server:
+   - Open a separate terminal window and navigate to the frontend folder:
+     cd "d:\AI Gym posture check\OKGYM\frontend"
+   - Install dependencies (if you haven't already):
+     npm install
+   - Start the React application:
+     npm start
+   - It will prompt you that port 3000 is occupied (if there are other processes) or it will start the app on http://localhost:3000. Wait for the browser to open.
+
+
+OPTION 2: Using the start-okgym.bat Script
+----------------------------------------------
+There is a batch script provided in the root folder, but it has a hardcoded Node.js path that you might need to fix for your machine before using it.
+
+1. Open "d:\AI Gym posture check\OKGYM\start-okgym.bat" in a text editor.
+2. Find the line: 
+   set NODE_EXE=C:\Users\DELL\miniconda3\envs\kaiqi\node.exe
+3. Change it to simply point to "node" if Node.js is installed globally on your system, like this:
+   set NODE_EXE=node
+4. Save the file and simply double-click "start-okgym.bat" to start both the frontend and backend simultaneously in separate windows.
+
+NOTE ON RECENT ERRORS:
+If the backend crashes with a "Cannot find module" error (e.g., related to cookie-parser or controllers), make sure all dependencies are installed cleanly by navigating to the backend folder and running:
+  npm install cookie-parser @types/cookie-parser
