@@ -2,6 +2,8 @@
 
 An AI-powered fitness application that provides real-time posture correction, exercise recognition, and personalized workout and diet planning.
 
+Live demo: https://smart-gym-ai.vercel.app
+
 ## Features
 
 - **AI Posture Detection** — Real-time posture analysis and form correction during exercises using computer vision
